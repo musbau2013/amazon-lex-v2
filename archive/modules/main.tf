@@ -2,7 +2,7 @@
 resource "awscc_lex_bot" "bot" {
   name        = var.bot_name
   description = var.bot_description
-  # role_arn    = "arn:aws:iam::381491964789:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots"
+  role_arn    = "arn:aws:iam::381491964789:role/aws-service-role/lexv2.amazonaws.com/AWSServiceRoleForLexV2Bots"
   idle_session_ttl_in_seconds = "300"
   data_privacy = {
     child_directed = var.child_directed
