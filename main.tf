@@ -13,7 +13,7 @@ resource "awscc_lex_bot" "bot" {
 # Create a Lex V2 bot version
 resource "awscc_lex_bot_version" "bot_version" {
   bot_id      = awscc_lex_bot.bot.id
-  bot_version = var.bot_version
+  #bot_version = "DRAFT" # var.bot_version
   # bot_version_locale_specification = {
   #   source_bot_version = "DRAFT"
   # }
