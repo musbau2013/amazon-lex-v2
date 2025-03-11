@@ -14,9 +14,17 @@ resource "awscc_lex_bot" "bot" {
 resource "awscc_lex_bot_version" "bot_version" {
   bot_id      = awscc_lex_bot.bot.id
   bot_version = var.bot_version
-  bot_version_locale_specification = {
-    source_bot_version = "DRAFT"
-  }
+  # bot_version_locale_specification = {
+  #   source_bot_version = "DRAFT"
+  # }
+  bot_version_locale_specification = [
+    {
+      locale_id = "en_US"
+      bot_version_locale_details = {
+        source_bot_version = "DRAFT"
+      }
+    }
+  ]
 }
 
 # Create a Lex V2 bot alias
