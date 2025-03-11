@@ -16,19 +16,19 @@ variable "bot_description" {
 variable "child_directed" {
   description = "Whether the bot is directed at children."
   type        = bool
-  default     = false
+ # default     = false
 }
 
 variable "bot_version" {
   description = "The version of the Lex V2 bot."
   type        = string
-  default     = "1"
+ # default     = "1"
 }
 
 variable "bot_alias_name" {
   description = "The name of the Lex V2 bot alias."
   type        = string
-  default     = "TestBotAlias"
+ # default     = "TestBotAlias"
 }
 
 variable "idle_session_ttl_in_seconds" {
